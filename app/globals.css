@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green:        #498467;
+  --green-light:  #5fa37e;
+  --green-pale:   #eef5f1;
+  --green-mid:    #d6ece0;
+  --blue:         #1C6E8C;
+  --blue-light:   #2589ae;
+  --blue-pale:    #eaf4f8;
+  --dark:         #0f1c22;
+  --mid:          #374f5c;
+  --muted:        #7a94a0;
+  --border:       #d8e6eb;
+  --border-light: #edf4f7;
+  --surface:      #f4f8fa;
+}
+
+@layer components {
+  .btn-gradient {
+    @apply relative overflow-hidden font-semibold text-white rounded-xl transition-all duration-200 cursor-pointer;
+    background: linear-gradient(135deg, #498467, #1C6E8C);
+    box-shadow: 0 4px 20px rgba(28,110,140,.25);
+  }
+  .btn-gradient::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(135deg, rgba(255,255,255,.13), transparent);
+  }
+  .btn-gradient:hover:not(:disabled) {
+    @apply -translate-y-0.5;
+    box-shadow: 0 8px 32px rgba(28,110,140,.3);
+  }
+  .input-base {
+    @apply w-full pl-10 pr-4 py-3 font-sans text-sm text-dark bg-surface
+           border border-border rounded-xl outline-none
+           transition-all duration-200 placeholder:text-muted;
+  }
+  .input-base:focus {
+    @apply border-blue bg-white;
+    box-shadow: 0 0 0 4px rgba(28,110,140,.09);
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
