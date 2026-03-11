@@ -48,7 +48,7 @@ export default function RoleSelectClient() {
         {/* Title */}
         <h1 className="font-display text-[38px] md:text-[44px] text-dark text-center leading-[1.1] tracking-tight mb-4 animate-fade-up-delay">
           Como você vai usar o{" "}
-          <span style={{ background:"linear-gradient(90deg,#498467,#1C6E8C)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}>
+          <span style={{ background: "linear-gradient(90deg,#498467,#1C6E8C)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
             HealthTrack
           </span>?
         </h1>
@@ -91,7 +91,7 @@ export default function RoleSelectClient() {
 
           {/* Client */}
           <div
-            onClick={() => alert("Cadastro de cliente em breve!")}
+            onClick={() => router.push("/cadastro/cliente")}
             className="group bg-white border-2 border-border rounded-3xl p-8 cursor-pointer transition-all duration-300 hover:-translate-y-1.5 hover:border-blue hover:shadow-xl relative overflow-hidden"
           >
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl pointer-events-none"
