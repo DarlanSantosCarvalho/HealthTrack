@@ -11,7 +11,7 @@ interface ExerciseSet {
   reps: string;
   weight: string;
   rest: string;
-  tempo: string;  
+  tempo: string;
 }
 
 interface Exercise {
